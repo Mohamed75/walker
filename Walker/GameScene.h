@@ -20,4 +20,7 @@
 
 @property SKAction *moveAndRemovePipes;
 
+
+@property SKNode *pipes;
+
 @end

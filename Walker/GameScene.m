@@ -9,9 +9,6 @@
 #import "GameScene.h"
 
 
-static NSInteger const kVerticalPipeGap = 100;
-
-
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
@@ -32,6 +29,13 @@ static NSInteger const kVerticalPipeGap = 100;
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        
+        SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"restartBtn.png"];
+        fireNode.position = CGPointMake(290, self.frame.size.height - 40);
+        fireNode.size = CGSizeMake(30, 30);
+        fireNode.name = @"restartButtonNode";//how the node is identified later
+        fireNode.zPosition = 1.0;
+        [self addChild:fireNode];
         
         self.physicsWorld.gravity = CGVectorMake( 0.0, -2.0 );
         
@@ -142,6 +146,10 @@ static NSInteger const kVerticalPipeGap = 100;
         SKAction* spawnThenDelayForever = [SKAction repeatActionForever:spawnThenDelay];
         [self runAction:spawnThenDelayForever];
         
+        
+        self.pipes = [SKNode node];
+        [self addChild:self.pipes];
+        
     }
     return self;
 }
@@ -157,13 +165,21 @@ static NSInteger const kVerticalPipeGap = 100;
     pipe1.zPosition = - 10;
     pipe1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe1.size];
     pipe1.physicsBody.dynamic = NO;
-    [self addChild:pipe1];
     
     [pipe1 runAction:self.moveAndRemovePipes];
     
+    [self.pipes addChild:pipe1];
 }
 
 
+-(void)resetScene {
+    // Move bird to original position and reset velocity
+    self.bird.position = CGPointMake(self.frame.size.width / 4, CGRectGetMidY(self.frame));
+    self.bird.physicsBody.velocity = CGVectorMake( 0, 0 );
+    
+    // Remove all existing pipes
+    [self.pipes removeAllChildren];
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
@@ -183,8 +199,21 @@ static NSInteger const kVerticalPipeGap = 100;
         
         [self addChild:sprite];
     }*/
-    self.bird.physicsBody.velocity = CGVectorMake(0, 0);
-    [self.bird.physicsBody applyImpulse:CGVectorMake(0, 8)];
+    
+    UITouch *touch      = [touches anyObject];
+    CGPoint location    = [touch locationInNode:self];
+    SKNode *node        = [self nodeAtPoint:location];
+    
+    //if fire button touched, bring the rain
+    if ([node.name isEqualToString:@"restartButtonNode"]) {
+        
+        [self resetScene];
+    }
+    else{
+        
+        self.bird.physicsBody.velocity = CGVectorMake(0, 0);
+        [self.bird.physicsBody applyImpulse:CGVectorMake(0, 8)];
+    }
 }
 
 

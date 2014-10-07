@@ -19,6 +19,7 @@
 		D1B4538E19E436B80044568E /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B4538C19E436B80044568E /* Ground.png */; };
 		D1B4538F19E436B80044568E /* Skyline.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B4538D19E436B80044568E /* Skyline.png */; };
 		D1B4539119E436C30044568E /* Pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B4539019E436C30044568E /* Pipe1.png */; };
+		D1B4539419E4464D0044568E /* restartBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B4539319E4464D0044568E /* restartBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D1B4538C19E436B80044568E /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
 		D1B4538D19E436B80044568E /* Skyline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skyline.png; sourceTree = "<group>"; };
 		D1B4539019E436C30044568E /* Pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe1.png; sourceTree = "<group>"; };
+		D1B4539319E4464D0044568E /* restartBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restartBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		D1B4539219E436C70044568E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D1B4539319E4464D0044568E /* restartBtn.png */,
 				D1B4538C19E436B80044568E /* Ground.png */,
 				D1B4538D19E436B80044568E /* Skyline.png */,
 				D1B4539019E436C30044568E /* Pipe1.png */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B4537719E431540044568E /* LaunchScreen.xib in Resources */,
+				D1B4539419E4464D0044568E /* restartBtn.png in Resources */,
 				D1B4539119E436C30044568E /* Pipe1.png in Resources */,
 				D1B4538F19E436B80044568E /* Skyline.png in Resources */,
 				D1B4537419E431540044568E /* Images.xcassets in Resources */,
@@ -442,6 +446,7 @@
 				D1B4538819E431540044568E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1B4538919E431540044568E /* Build configuration list for PBXNativeTarget "WalkerTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +455,7 @@
 				D1B4538B19E431540044568E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
