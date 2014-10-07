@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1B4536419E431540044568E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B4536319E431540044568E /* main.m */; };
+		D1B4536719E431540044568E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B4536619E431540044568E /* AppDelegate.m */; };
+		D1B4536A19E431540044568E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B4536919E431540044568E /* GameScene.m */; };
+		D1B4536C19E431540044568E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1B4536B19E431540044568E /* GameScene.sks */; };
+		D1B4536F19E431540044568E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B4536E19E431540044568E /* GameViewController.m */; };
+		D1B4537219E431540044568E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B4537019E431540044568E /* Main.storyboard */; };
+		D1B4537419E431540044568E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B4537319E431540044568E /* Images.xcassets */; };
+		D1B4537719E431540044568E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B4537519E431540044568E /* LaunchScreen.xib */; };
+		D1B4538319E431540044568E /* WalkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B4538219E431540044568E /* WalkerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1B4537D19E431540044568E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B4535619E431540044568E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B4535D19E431540044568E;
+			remoteInfo = Walker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1B4535E19E431540044568E /* Walker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B4536219E431540044568E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B4536319E431540044568E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1B4536519E431540044568E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D1B4536619E431540044568E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D1B4536819E431540044568E /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		D1B4536919E431540044568E /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		D1B4536B19E431540044568E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D1B4536D19E431540044568E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D1B4536E19E431540044568E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D1B4537119E431540044568E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1B4537319E431540044568E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D1B4537619E431540044568E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D1B4537C19E431540044568E /* WalkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B4538119E431540044568E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B4538219E431540044568E /* WalkerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1B4535B19E431540044568E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B4537919E431540044568E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1B4535519E431540044568E = {
+			isa = PBXGroup;
+			children = (
+				D1B4536019E431540044568E /* Walker */,
+				D1B4537F19E431540044568E /* WalkerTests */,
+				D1B4535F19E431540044568E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1B4535F19E431540044568E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4535E19E431540044568E /* Walker.app */,
+				D1B4537C19E431540044568E /* WalkerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1B4536019E431540044568E /* Walker */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4536519E431540044568E /* AppDelegate.h */,
+				D1B4536619E431540044568E /* AppDelegate.m */,
+				D1B4536819E431540044568E /* GameScene.h */,
+				D1B4536919E431540044568E /* GameScene.m */,
+				D1B4536B19E431540044568E /* GameScene.sks */,
+				D1B4536D19E431540044568E /* GameViewController.h */,
+				D1B4536E19E431540044568E /* GameViewController.m */,
+				D1B4537019E431540044568E /* Main.storyboard */,
+				D1B4537319E431540044568E /* Images.xcassets */,
+				D1B4537519E431540044568E /* LaunchScreen.xib */,
+				D1B4536119E431540044568E /* Supporting Files */,
+			);
+			path = Walker;
+			sourceTree = "<group>";
+		};
+		D1B4536119E431540044568E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4536219E431540044568E /* Info.plist */,
+				D1B4536319E431540044568E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1B4537F19E431540044568E /* WalkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4538219E431540044568E /* WalkerTests.m */,
+				D1B4538019E431540044568E /* Supporting Files */,
+			);
+			path = WalkerTests;
+			sourceTree = "<group>";
+		};
+		D1B4538019E431540044568E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1B4538119E431540044568E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1B4535D19E431540044568E /* Walker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B4538619E431540044568E /* Build configuration list for PBXNativeTarget "Walker" */;
+			buildPhases = (
+				D1B4535A19E431540044568E /* Sources */,
+				D1B4535B19E431540044568E /* Frameworks */,
+				D1B4535C19E431540044568E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Walker;
+			productName = Walker;
+			productReference = D1B4535E19E431540044568E /* Walker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1B4537B19E431540044568E /* WalkerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B4538919E431540044568E /* Build configuration list for PBXNativeTarget "WalkerTests" */;
+			buildPhases = (
+				D1B4537819E431540044568E /* Sources */,
+				D1B4537919E431540044568E /* Frameworks */,
+				D1B4537A19E431540044568E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B4537E19E431540044568E /* PBXTargetDependency */,
+			);
+			name = WalkerTests;
+			productName = WalkerTests;
+			productReference = D1B4537C19E431540044568E /* WalkerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1B4535619E431540044568E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Explocial 6";
+				TargetAttributes = {
+					D1B4535D19E431540044568E = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					D1B4537B19E431540044568E = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = D1B4535D19E431540044568E;
+					};
+				};
+			};
+			buildConfigurationList = D1B4535919E431540044568E /* Build configuration list for PBXProject "Walker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1B4535519E431540044568E;
+			productRefGroup = D1B4535F19E431540044568E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1B4535D19E431540044568E /* Walker */,
+				D1B4537B19E431540044568E /* WalkerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1B4535C19E431540044568E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B4537719E431540044568E /* LaunchScreen.xib in Resources */,
+				D1B4537419E431540044568E /* Images.xcassets in Resources */,
+				D1B4536C19E431540044568E /* GameScene.sks in Resources */,
+				D1B4537219E431540044568E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B4537A19E431540044568E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1B4535A19E431540044568E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B4536F19E431540044568E /* GameViewController.m in Sources */,
+				D1B4536719E431540044568E /* AppDelegate.m in Sources */,
+				D1B4536A19E431540044568E /* GameScene.m in Sources */,
+				D1B4536419E431540044568E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B4537819E431540044568E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B4538319E431540044568E /* WalkerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1B4537E19E431540044568E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B4535D19E431540044568E /* Walker */;
+			targetProxy = D1B4537D19E431540044568E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1B4537019E431540044568E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B4537119E431540044568E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1B4537519E431540044568E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B4537619E431540044568E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1B4538419E431540044568E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D1B4538519E431540044568E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B4538719E431540044568E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Walker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D1B4538819E431540044568E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Walker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D1B4538A19E431540044568E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WalkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walker.app/Walker";
+			};
+			name = Debug;
+		};
+		D1B4538B19E431540044568E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WalkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walker.app/Walker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1B4535919E431540044568E /* Build configuration list for PBXProject "Walker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B4538419E431540044568E /* Debug */,
+				D1B4538519E431540044568E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B4538619E431540044568E /* Build configuration list for PBXNativeTarget "Walker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B4538719E431540044568E /* Debug */,
+				D1B4538819E431540044568E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1B4538919E431540044568E /* Build configuration list for PBXNativeTarget "WalkerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B4538A19E431540044568E /* Debug */,
+				D1B4538B19E431540044568E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1B4535619E431540044568E /* Project object */;
+}
