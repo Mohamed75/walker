@@ -30,7 +30,7 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"restartBtn.png"];
+        SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"restBtn.jpg"];
         fireNode.position = CGPointMake(290, self.frame.size.height - 40);
         fireNode.size = CGSizeMake(30, 30);
         fireNode.name = @"restartButtonNode";//how the node is identified later
