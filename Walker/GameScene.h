@@ -10,4 +10,8 @@
 
 @interface GameScene : SKScene
 
+@property SKSpriteNode *bird;
+
+@property SKColor *skyColor;
+
 @end
