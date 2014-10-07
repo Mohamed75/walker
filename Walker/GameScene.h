@@ -14,4 +14,10 @@
 
 @property SKColor *skyColor;
 
+
+
+@property SKTexture *pipeTexture1;
+
+@property SKAction *moveAndRemovePipes;
+
 @end

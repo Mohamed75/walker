@@ -8,6 +8,10 @@
 
 #import "GameScene.h"
 
+
+static NSInteger const kVerticalPipeGap = 100;
+
+
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
@@ -29,13 +33,18 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        self.physicsWorld.gravity = CGVectorMake( 0.0, -2.0 );
+        
         SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"Spaceship"];
         birdTexture1.filteringMode = SKTextureFilteringNearest;
         
         self.bird = [SKSpriteNode spriteNodeWithTexture:birdTexture1];
         [self.bird setScale:.1];
-        self.bird.position = CGPointMake(self.frame.size.width / 4, CGRectGetMidY(self.frame));
+        self.bird.position = CGPointMake(self.frame.size.width / 4, self.frame.size.height / 4);
         
+        self.bird.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.bird.size.height / 2];
+        self.bird.physicsBody.dynamic = YES;
+        self.bird.physicsBody.allowsRotation = NO;
         
         [self addChild:self.bird];
         
@@ -78,6 +87,14 @@
         SKTexture* skylineTexture = [SKTexture textureWithImageNamed:@"Skyline"];
         skylineTexture.filteringMode = SKTextureFilteringNearest;
         
+        
+        SKNode* dummy = [SKNode node];
+        dummy.position = CGPointMake(0, skylineTexture.size.height*2);
+        dummy.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.frame.size.width, skylineTexture.size.height * 2)];
+        dummy.physicsBody.dynamic = NO;
+        [self addChild:dummy];
+        
+        
         SKAction* moveSkylineSprite = [SKAction moveByX:-skylineTexture.size.width*2 y:0 duration:0.1 * skylineTexture.size.width*2];
         SKAction* resetSkylineSprite = [SKAction moveByX:skylineTexture.size.width*2 y:0 duration:0];
         SKAction* moveSkylineSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[moveSkylineSprite, resetSkylineSprite]]];
@@ -91,8 +108,59 @@
             [self addChild:sprite];
         }
         
+        
+        
+        
+        // Create pipes
+        
+        self.pipeTexture1 = [SKTexture textureWithImageNamed:@"Pipe1"];
+        self.pipeTexture1.filteringMode = SKTextureFilteringNearest;
+        
+        /*
+        CGFloat y = arc4random() % (NSInteger)( self.frame.size.height / 2 );
+        
+        SKSpriteNode* pipe1 = [SKSpriteNode spriteNodeWithTexture:self.pipeTexture1];
+        [pipe1 setScale:2];
+        pipe1.position = CGPointMake( self.frame.size.width + self.pipeTexture1.size.width * 2, y + kVerticalPipeGap);
+        pipe1.zPosition = -10;
+        pipe1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe1.size];
+        pipe1.physicsBody.dynamic = NO;
+        [self addChild:pipe1];
+        
+        SKAction* movePipes = [SKAction repeatActionForever:[SKAction moveByX:-1 y:0 duration:0.02]];
+        [pipe1 runAction:movePipes];*/
+        CGFloat distanceToMove = self.frame.size.width + 2 * self.pipeTexture1.size.width;
+        SKAction* movePipes = [SKAction moveByX:-distanceToMove y:0 duration:0.01 * distanceToMove];
+        SKAction* removePipes = [SKAction removeFromParent];
+        self.moveAndRemovePipes = [SKAction sequence:@[movePipes, removePipes]];
+        
+        
+        
+        SKAction* spawn = [SKAction performSelector:@selector(spawnPipes) onTarget:self];
+        SKAction* delay = [SKAction waitForDuration:2.0];
+        SKAction* spawnThenDelay = [SKAction sequence:@[spawn, delay]];
+        SKAction* spawnThenDelayForever = [SKAction repeatActionForever:spawnThenDelay];
+        [self runAction:spawnThenDelayForever];
+        
     }
     return self;
+}
+
+
+-(void)spawnPipes {
+    
+    CGFloat y = arc4random() % (NSInteger)( self.frame.size.height / 3 );
+    
+    SKSpriteNode* pipe1 = [SKSpriteNode spriteNodeWithTexture:self.pipeTexture1];
+    [pipe1 setScale:2];
+    pipe1.position = CGPointMake( self.frame.size.width + self.pipeTexture1.size.width, y );
+    pipe1.zPosition = - 10;
+    pipe1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe1.size];
+    pipe1.physicsBody.dynamic = NO;
+    [self addChild:pipe1];
+    
+    [pipe1 runAction:self.moveAndRemovePipes];
+    
 }
 
 
@@ -115,10 +183,25 @@
         
         [self addChild:sprite];
     }*/
+    self.bird.physicsBody.velocity = CGVectorMake(0, 0);
+    [self.bird.physicsBody applyImpulse:CGVectorMake(0, 8)];
 }
+
+
+CGFloat clamp(CGFloat min, CGFloat max, CGFloat value) {
+    if( value > max ) {
+        return max;
+    } else if( value < min ) {
+        return min;
+    } else {
+        return value;
+    }
+}
+
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    self.bird.zRotation = clamp( -1, 0.5, self.bird.physicsBody.velocity.dy * (self.bird.physicsBody.velocity.dy < 0 ? 0.003 : 0.001 ) );
 }
 
 @end
